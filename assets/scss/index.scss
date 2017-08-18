@@ -1,0 +1,142 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+	width:100%;
+	height:58px;
+	background:#fff;
+	margin: 0 auto;
+	.header-warp{
+		width:1000px;
+		height:58px;
+		margin:0 auto;
+		.header-top{
+			float:left;
+			width:136px;
+			height:32px;
+			padding:13px 0;
+			>a{
+				display:inline-block;
+				width:136px;
+				height:33px;
+				background:url(../images/logo.png) no-repeat;
+			}
+		}
+		.header-nav{
+			display:inline-block;
+			>li{
+				float:left;
+				line-height:58px;
+				>a{
+					display:inline-block;	
+					color:#000;
+					height:54px;
+					font-size:14px;
+					font-family: Arial;
+					padding: 0 15px;
+					text-decoration: none;
+				}
+				& a:hover{
+					border-bottom:3px solid #ff9d00;
+					color: #ff8a00;
+				}
+				&:hover .yj{
+					 border-top: 4px solid #ff8a00;
+				}
+				&:hover .yjt{
+					 border-top: 4px solid #ff8a00;
+				}
+				>#sy{
+					color:#fff;
+				}
+				.yj,.yjt{
+					display: inline-block;
+					margin-left:-15px;
+					vertical-align:middle;
+				    border-top: 4px solid #666;
+				    border-left: 4px dashed transparent;
+				    border-right: 4px dashed transparent;
+				}
+			}
+			.first{
+				background-color: #ff9d00;
+				margin-left:20px;
+				}
+			.xlb>li{
+				text-align:center;
+				border:1px solid #ddd;
+			}
+			.xlb>li:hover{
+				background:#ddd;
+			}
+
+		}
+		.header-bottom{
+			float:right;
+			width:185px;
+			height:32px;
+			line-height:32px;
+			padding:13px 0;
+			text-align:right;
+			.weibo{
+				display:inline-block;
+				width:26px;
+				height:26px;
+				background:url(../images/logo-xbt.png) no-repeat 0 -50px;
+				vertical-align:middle;
+				margin-right:5px;
+			}
+			.weibo:hover{
+				background:url(../images/logo-xbt.png) no-repeat 0 -80px;
+			}
+			.qq{
+				display:inline-block;
+				width:26px;
+				height:26px;
+				background:url(../images/logo-xbt.png) no-repeat -30px -50px;
+				vertical-align:middle;
+				margin-right:5px;
+			}
+			.qq:hover{
+				background:url(../images/logo-xbt.png) no-repeat -30px -80px;
+			}
+			.weixin{
+				display:inline-block;
+				width:26px;
+				height:26px;
+				background:url(../images/logo-xbt.png) no-repeat 0 -165px;
+				vertical-align:middle;
+				margin-right:5px;
+			}
+			.weixin:hover{
+				background:url(../images/logo-xbt.png) no-repeat -30px -165px;
+			}
+			>a{
+				text-decoration:none;
+				color: #ff9d00;
+				font-size:14px;
+				vertical-align:middle;
+			}
+			.xh:hover{
+				text-decoration:underline;
+			}
+			>span{
+				display:inline-block;
+				font-size:14px;
+				color: #ddd;
+				margin: 0 3px;
+				vertical-align:middle;
+			}
+		}
+	}
+	.header-shadow{
+		position: absolute;
+	    left: 0;
+	    top:58px;
+	    width: 100%;
+	    height: 2px;
+	    border-top: 1px solid #d6d6d6;
+	    background-color: rgba(0,0,0,.06);
+	}
+}	
