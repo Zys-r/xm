@@ -1,0 +1,207 @@
+.container{
+	width: 100%;
+	height: auto;
+}
+.fullscreen-bg{
+	background-position: 50% 50%;
+	background-size: cover;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	background: url(../images/reg/reg1.jpg);
+}
+.wrapper{
+	width: 980px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -245px 0 0 -490px;
+	z-index: 2;
+	color: #666;
+}
+.wrapper>a{
+	width: 75px;
+	height: 90px;
+	display: block;
+	text-indent: 999px;
+	overflow: hidden;
+	background: url(../images/reg/logo-new.png) no-repeat;
+	margin: 0 auto;
+}
+.box{
+	position: absolute;
+	top: 90px;
+	left:305px;
+	z-index: 9;
+}
+.nmbi{
+	border-radius: 5px;
+	background: #fff;
+}
+/*表单部分代码*/
+.inner{
+	width: 370px;
+	padding-top: 26px;
+	border-radius: 5px;
+}
+.inner-t{
+	width: 320px;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+.inner-t input{
+	width: 306px;
+	height: 28px;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	font-size: 15px;
+	color: #666;
+	outline: none;
+	padding: 6px 0 6px 12px;
+	box-shadow: 0 0 5px #fff;
+	transition: box-shadow 0.25s linear 0s;
+}
+.inner-t input:focus{
+	border: 1px solid #ffa200;
+	outline: none;
+	box-shadow: 0 0 5px #ffa200;
+	transition: box-shadow 0.25s linear 0s;
+}
+/*提示消息部分代码*/
+.hide{
+	display: none;
+	position: absolute;
+	top: 0;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #ff3c00;
+	width: 300px;
+	height: 16px;
+	padding:0 0 3px 22px;
+	text-align: left;
+	background: url(../images/reg/err_ico2.png) no-repeat 0 -60px;
+}
+/*button按钮*/
+.inner-b{
+	width: 320px;
+	margin: 0 auto;
+	padding: 12px 0 0;
+}
+.inner-b button{
+	width: 320px;
+	height: 42px;
+	color: #fff;
+	line-height: 40px;
+	border: none;
+	background: #ffa800;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.agreement{
+	width: 320px;
+	margin: 0 auto;
+	padding-top: 12px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #ccc;
+	text-align: right;
+}
+.agreement a{
+	color: #999;
+	margin-left: 2px;
+	font-size: 12px;
+}
+.agreement a:hover{
+	text-decoration: underline;
+}
+/*用户合作*/
+.connect{
+	margin-top: 30px;
+}
+.connect p{
+	padding:15px 0 20px 24px;
+	font-size: 12px;
+	color: #999;
+	border-top: 1px solid #ebebeb;
+}
+.bd{
+	padding: 0 0 0 25px;
+	width: 348px;
+	height: 84px;
+	overflow: hidden;
+}
+.bd a{
+	display: inline-block;
+	margin-right: 25px;
+	color: #999;
+	font-size: 12px;
+	text-align: center;
+	width: 58px;
+	height: 84px;
+}
+.bd a:hover{
+	color: #666;
+}
+.bd i{
+	width: 42px;
+	height: 42px;
+	display: block;
+	margin:  0 0 4px 10px;
+	cursor: pointer;
+	background: url(../images/reg/c_icon3.gif) no-repeat 0 0;
+}
+.bd a .qq{
+	background: url(../images/reg/c_icon3.gif) no-repeat -42px 0;
+}
+.bd a .weixin{
+	background: url(../images/reg/c_icon3.gif) no-repeat -294px 0;
+}
+.phto{
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 12px;
+	z-index: 3;
+	color: #fff
+	background: transparent;
+}
+.phto a{
+	color: #fff;
+}
+.bottom a{
+	color: #ffa800;
+    margin-left: 6px;
+}
+.bottom{
+	width: 140px;
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,.4);
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    padding: 4px 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+}
+.wrapper .bhide{
+	display: none;
+}
+.bhide .word{
+	margin-top: 10px;
+}
+.bhide .pass{
+	width: 320px;
+	margin: 0 auto;
+	padding: 8px 0 0;
+	text-align: right;
+}
+.bhide .pass a{
+	font-size: 12px;
+	color: #FFA800;
+}
