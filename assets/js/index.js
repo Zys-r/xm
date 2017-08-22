@@ -108,17 +108,21 @@ $('.client').hover(function() {
     });
 
 //reg获取value值
-$('.inner-t input').blur(function(){
-	if ($(this).val() == '') {
+
+$('.inner-t input').on('blur',function(){
+	if($(this).val() == '') {
 		$('.hide').show();
+	}else  if (/(13[0-9]|14[57]|15[012356789]|17[135678]|18[0-9])[0-9]{8}/.test($(this).val())==false){
+		$('.hide').show().text('请输入正确手机号');
 	}
 })
+
 
 $('.bottom a').click(function(){
 	if ($(this).text() == '马上登录') {
 		$('.box').stop(true,true).fadeOut(100);
-		$('.bhide').showtop(true,true).fadeIn(100);
-	}s
+		$('.bhide').stop(true,true).fadeIn(100);
+	}
 	if ($(this).text() == '马上注册') {
 		$('.box').stop(true,true).fadeIn(100);
 		$('.bhide').stop(true,true).fadeOut(100);
@@ -127,13 +131,57 @@ $('.bottom a').click(function(){
 
 
 
-
 $('.xh').click(function(){
 	$(this).attr('href','./reg.html');
 	
 })
 
+//遍历
+$.get('./data.json',function(msg){
+	var content = '';
+	msg.forEach(function(value,key){
+		content+='<div class="col">';
+		value.forEach(function(v,k){					
+			if (key<1) {
+				content+=`	
+					<dl>
+				        <dt>${v.shi}</dt>
+				        <dd>
+				            <a href="#" target="_blank">${v.bj}</a>
+				            <a href="#" target="_blank">${v.sh}</a>   
+				            <a href="#" target="_blank">${v.cq}</a>
+				            <a href="#" target="_blank">${v.tj}</a>
+				        </dd>
+				    </dl>
+				`;
+			}if (key==1) {
+				content+=`
+					<dl>
+				        <dt>${v.shi}</dt>
+				        <dd>
+				            <a href="#" target="_blank">${v.bj}</a>
+				            <a href="#" target="_blank">${v.sh}</a>   
+				            <a href="#" target="_blank">${v.cq}</a>
+				            <a href="#" target="_blank">${v.tj}</a>
+				        </dd>
+				    </dl>
+				`;
+			}
+		})
+		content+='</div>';
+	})
+	$('.hot-list:eq(0)').html(content);
+})
 
-
+// $.get('./data1.json',function(msg){
+// 	var list = '';
+// 	console.log(msg.theme.four.length);//7
+// 	for(var i=0;i<msg.theme.one.length;i++){
+// 		list+=`
+			
+// 		`;
+// 	}
+	
+// })
 
 })

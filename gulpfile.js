@@ -11,7 +11,9 @@ gulp.task('serve', ['scss'], function() {
     });
 
     gulp.watch("assets/scss/*.scss", ['scss']);
-    gulp.watch("app/*.html").on('change', reload);
+    gulp.watch("/*.html").on('change', reload);
+    gulp.watch("assets/js/*.js").on('change', reload);
+    gulp.watch("/*.json").on('change', reload);
 });
 
 // scss编译后的css将注入到浏览器里实现更新
