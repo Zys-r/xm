@@ -468,7 +468,6 @@ section{
 }
 .row-t{
   width: 980px;
-  height: 626px;
   margin: 0 auto;
 }
 .hot ul .hotoy{
@@ -562,6 +561,7 @@ section{
 .tiles{
   margin: -10px -20px -10px 0;
   overflow: hidden;
+  display: none;
 }
 .tiles .col3{
   width: 324px;
@@ -574,6 +574,12 @@ section{
   background: #f2f2f2;
   position: relative;
   font-size: 0;
+}
+.season .tiles:first-child{
+  display: block;
+}
+.cate-tile{
+  display: block;
 }
 .item a{
   display: block;
@@ -621,6 +627,10 @@ section{
   line-height: 24px;
   font-size: 14px;
   overflow: hidden;
+  display: none;
+}
+.hot-list:first-child{
+  display: block;
 }
 .hot-list .col{
   float: left;

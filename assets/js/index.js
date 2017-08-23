@@ -136,52 +136,86 @@ $('.xh').click(function(){
 	
 })
 
-//遍历
+// //遍历
 $.get('./data.json',function(msg){
-	var content = '';
+	content='';
 	msg.forEach(function(value,key){
-		content+='<div class="col">';
-		value.forEach(function(v,k){					
-			if (key<1) {
-				content+=`	
-					<dl>
-				        <dt>${v.shi}</dt>
-				        <dd>
-				            <a href="#" target="_blank">${v.bj}</a>
-				            <a href="#" target="_blank">${v.sh}</a>   
-				            <a href="#" target="_blank">${v.cq}</a>
-				            <a href="#" target="_blank">${v.tj}</a>
-				        </dd>
-				    </dl>
-				`;
-			}if (key==1) {
-				content+=`
-					<dl>
-				        <dt>${v.shi}</dt>
-				        <dd>
-				            <a href="#" target="_blank">${v.bj}</a>
-				            <a href="#" target="_blank">${v.sh}</a>   
-				            <a href="#" target="_blank">${v.cq}</a>
-				            <a href="#" target="_blank">${v.tj}</a>
-				        </dd>
-				    </dl>
-				`;
-			}
-		})
-		content+='</div>';
+		// console.log(key);//0,1,2,3
+		content+=`<div class="hot-list">`;
+			value.forEach(function(v,k){
+				content+=`<div class="col">`;
+					v.forEach(function(x,y){
+					content+=`
+						<dl>
+					        <dt>${x.shi}</dt>
+					        <dd>
+					            <a href="#" target="_blank">${x.bj}</a>
+					            <a href="#" target="_blank">${x.sh}</a>   
+					            <a href="#" target="_blank">${x.cq}</a>
+					            <a href="#" target="_blank">${x.tj}</a>
+					        </dd>
+				    	</dl>
+					`; 
+				})		
+				content+=`</div>`;
+			})
+		content+=`</div>`;
 	})
-	$('.hot-list:eq(0)').html(content);
+
+	$('.china').html(content);
+})
+	console.log($('.hot>ul>li'));
+$('.hot>ul>li').mouseover(function(){
+	var index = $(this).index()/2;
+	console.log(index);
+	$('.china>.hot-list').eq(index).show().siblings().hide();
 })
 
-// $.get('./data1.json',function(msg){
-// 	var list = '';
-// 	console.log(msg.theme.four.length);//7
-// 	for(var i=0;i<msg.theme.one.length;i++){
-// 		list+=`
-			
-// 		`;
-// 	}
-	
-// })
+
+//当季推荐部分遍历
+$.get('./data1.json',function(msg){
+	con='';
+	msg.forEach(function(value,key){
+		// console.log(value);
+		con+=`
+			<div class="tiles">
+			`;
+		value.forEach(function(v,k){
+			if (v.type == "3") {
+			con+=`<div class="item col3">
+        			<a href="#" target="_blank">
+        			<img src="assets/images/list/${v.img}" width="323" height="220">
+        			<div class="title">${v.title}</div></a>
+    			</div>`;		
+			}else if(v.type == "4"){
+				con+=`<div class="item col4">
+        			<a href="#" target="_blank">
+        			<img src="assets/images/list/${v.img}" width="238" height="220">
+        			<div class="title">${v.title}</div></a>
+    			</div>`;
+			}
+		})
+		con+= `</div>`;	
+	})			
+	$('.season').html(con);	
+})
+
+$('.navbar:eq(1) ul li').mouseover(function(){
+	var sy = $(this).index()/2;
+	$('.season>.tiles').eq(sy).show().siblings().hide();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })
