@@ -622,6 +622,12 @@ section{
   border-right: 2px solid #fff;
   transform: rotate(-45deg);
 }
+.cate .tiles{
+  display: none;
+}
+.cate .tiles:first-child{
+  display: block;
+}
 /*直辖市部分代码*/
 .hot-list{
   line-height: 24px;

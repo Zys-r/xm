@@ -164,10 +164,8 @@ $.get('./data.json',function(msg){
 
 	$('.china').html(content);
 })
-	console.log($('.hot>ul>li'));
 $('.hot>ul>li').mouseover(function(){
 	var index = $(this).index()/2;
-	console.log(index);
 	$('.china>.hot-list').eq(index).show().siblings().hide();
 })
 
@@ -205,13 +203,75 @@ $('.navbar:eq(1) ul li').mouseover(function(){
 	$('.season>.tiles').eq(sy).show().siblings().hide();
 })
 
+$.get('./data2.json',function(msg){
+	var ject = '';
+	msg.forEach(function(value,key){
+		ject+=`<div class="tiles cate-tile">`;
+			value.forEach(function(v,k){
+				ject+=`
+					<div class="item col4">
+						<a href="#" target="_blank">
+						<img src="assets/images/list/${v.img}" width="238" height="220">
+						<div class="title">${v.title}</div>
+						</a>
+					</div>
+				`;
+			})
+		ject+=`</div>`;
+	})
+	$('.cate').html(ject);
+})
 
+$('.row-theme .navbar li').mouseover(function(event) {
+	var index = $(this).index()/2;
+	$('.cate .cate-tile').eq(index).show().siblings().hide();
+});
 
+//foot fixed 
+$('.toolbar>div>.btn').mouseover(function(){
+	$(this).children('em').hide().show();
+}).mouseout(function(){
+	$(this).children('em').hide();
+});
+$('.toolbar>.toolbar-bot>.btn').mouseover(function(){
+	console.log(11);
+	$(this).siblings('.code').show();
+}).mouseout(function(){
+	$(this).siblings('.code').hide();
+});
+// var x = $(document).height();
+// console.log(x);
+$(window).scroll(function(){
+	var x = $(this).scrollTop();
+	var y = $(this).height();
+	var z = $(document).height();
+	if (x>450) {
+		$('.toolbar-top').show();
+	}else{
+		$('.toolbar-top').hide();
+	}
+	if (z-x-y<600) {
+		$('.toolbar').css({
+			"position":"absolute",
+			"bottom":"-600px"
+		});
+	}else{
+		$('.toolbar').css({
+			"position":"fixed",
+			"bottom":"20px"
+		});
+	}
+});
 
-
-
-
-
+//xxk lb aside
+$('.md-nav>.nav-item').mouseover(function(){
+	$(this).find('.nav-panel').show();
+	//var ix = $(this).index();
+	//$('.md-nav>.nav-item').eq(ix).find('.nav-panel').show();
+	//	$(this).index().eq(ix).find('.nav-panel').show(); cuowu
+}).mouseout(function(){
+	$(this).find('.nav-panel').hide();
+});
 
 
 

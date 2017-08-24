@@ -2,7 +2,9 @@
   width: 100%;
   margin: 0 auto;
 }
-
+#top{
+  display:none;
+}
 header {
   width: 100%;
   background: #fff;
@@ -345,11 +347,13 @@ section{
   width:100%;
   overflow:hidden;
 }
+/*最外层DIV*/
 .warpper{
   width:980px;
   margin:0 auto;
   margin:15px auto 0;
 }
+/*头部*/
 .focus{
   height:340px;
   margin:10px 0 15px;
@@ -372,6 +376,7 @@ section{
   z-index:10;
 }
 .nav-title{
+  border-right:5px solid #fff;
   padding:0 15px;
   height:40px;
   border-bottom:1px solid #ddd;
@@ -381,6 +386,16 @@ section{
   cursor: default;
   position:relative;
   z-index:2;
+  &:hover{
+    border-right:5px solid #fff;
+    margin-right:-3px;
+  }
+  &:hover>h3{
+    color:#ff9d00;
+  }
+  &:hover>.nav-bg{
+   background:url(../images/show/new-gl-icon6.png) no-repeat -30px -40px;
+  }
   >.nav-bg{
     position:absolute;
     right:15px;
@@ -391,6 +406,9 @@ section{
     background:url(../images/show/new-gl-icon6.png) no-repeat -20px -40px;
   }
 }
+.nav-item{
+
+}
 .nav-panel{
   position:absolute;
   top:-1px;
@@ -400,6 +418,7 @@ section{
   border:1px solid #ddd;
   background-color: #fff;
   box-shadow: 0 3px 2px rgba(0,0,0,.1);
+  // display:none;
   >ol{
     position:absolute;
     z-index:2;
@@ -413,7 +432,7 @@ section{
       color: #ffa800;
     }
     >li{
-      line-height:30px;
+      height:30px;
       overflow:hidden;
       >.rank-num{
         float: left;
@@ -432,8 +451,466 @@ section{
   }
   strong{
     padding: 0 15px; 
+    a{
+      color:#666;
+    }
   }
 }
+.input-like{
+    position: relative;
+    z-index: 10;
+    height: 40px;
+    margin-top: 10px;
+    border: 2px #FFA800 solid;
+    span{
+    float: left;
+    width: 29px;
+    height: 27px;
+    margin-top: 7px;
+    margin-left: 8px;
+    background: url(../images/show/new-gl-icon6.png) -20px -60px no-repeat;
+    }
+    .search-word{
+      width:206px;
+      height:30px;
+      padding:3px 0;
+      border:none;
+      font-size:12px;
+      color:#888;
+      margin-left:8px;
+      outline:none;
+      margin-top:2px;
+    }
+    .clear{
+      display:block;
+      clear:both;
+      height:0;
+      font-size:0;
+      line-height:0;
+      overflow:hidden;
+    }
+}
+.app_d{
+  border-bottom:1px solid #e3e3e3;
+  height:50px;
+  margin-top:15px;
+  padding-bottom:14px;
+  overflow:hidden;  
+  h3{
+    float:left;
+    width:50px;
+    height:50px;
+    overflow:hidden;  
+  }
+  .domn_in{
+    float:left;
+    width:180px;
+    margin-left:18px;
+    h4{
+      font-size:16px;
+      margin-top:5px;
+      color:#414141;
+      line-height:18px;
+      a{
+        color: #ff9d00;
+        cursor: pointer;
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+    p{
+      margin-top:8px;
+      a{
+        float:left;
+        font-size:12px;
+        color:#666;
+        font-family: Arial;
+      }
+      span{
+        float:left;
+        color:#D8D8D8;
+        height:15px;
+        width:2px;
+        line-height:14px;
+        padding:0 4px;
+        overflow:hidden;
+      }
+    }
+  }
+}
+/*正文列表部分gonglve-wrap*/
+.d980{
+  position:relative;
+}
+.gonglve-wrap{
+  margin-top:15px;
+  padding-bottom:20px;
+  &:after{
+    content:'';
+    clear:both;
+    display:block;
+  }
+}
+.slide{
+  float:left;
+  width:150px;
+  .slide-top{
+    height:50px;
+    line-height:50px;
+    color:#333;
+    border-bottom:1px solid #eee;
+  }
+}
+.slide-mid{
+  margin-bottom:10px;
+  height:45px;
+  line-height:25px;
+  color:#333;
+  border-bottom:1px solid #eee;
+  .mid-item{
+    float:left;
+    width:40px;
+    font-size:14px;
+  }
+  .mid-item+.mid-item{
+    margin-left:20px;
+  }
+  .mid-item+.mid-item:before{ 
+    content:'';
+    position:absolute;
+    margin:16px 0 0 -10px;
+    width:1px;
+    height:13px;
+    background:#eee;
+  }
+  .triggle{
+    padding:10px 0;
+    height:22px;
+    cursor:pointer;
+    i{
+      float:right;
+      margin-top:10px;
+      border-top:4px solid #999;
+      border-left:4px solid transparent;
+      border-right:4px solid transparent;
+      overflow:hidden;
+      font-size:0;
+    }
+  }
+}
+.drop{
+  position:absolute;
+  margin-top:10px;
+  padding:20px;
+  width:410px;
+  background:#fff;
+  border:1px solid #e5e5e5;
+  line-height:30px;
+  display:none;
+  .inner{
+    overflow:hidden;
+  }
+    ul{
+      margin-left:-15px;
+      li:before{
+        content:'';
+        float:left;
+        margin:8px 0 0 -15px;
+        width:1px;
+        height:13px;
+        background:#eee;
+      }
+      li{
+        float:left;
+        margin:0 15px;
+      }
+    }
+    a{
+      color:#333;
+    }
+}
+.slide-bot{
+  .gl-first{
+    float:none;
+    margin-right:40px;
+    width:130px;
+    color:#666;
+    a{
+      display:block;
+      height:184px;
+      width:130px;
+      overflow:hidden;
+    }
+    .time{
+      margin:5px 0;
+      text-align:center;
+      font-size:12px;
+    }
+    .down{
+      margin-top:5px;
+      width:130px;
+      background:#EBEBEB;
+      border-radius:30px;
+      position:relative;
+      span{
+        position:absolute;
+        top:0;
+        left:0;
+        height:24px;
+        width:24px;
+        background:url(../images/show/new-gl-icon6.png) -20px -90px no-repeat;     
+      }
+      >p{
+        line-height:24px;
+        font-size:12px;
+        padding-left:30px;
+      }
+    }
+  }
+  li{
+    padding:15px 0;
+    .num{
+      float:left;
+      margin-right:20px;
+      font-size:18px;
+      color:#ff9d00;
+    }
+    a{
+      color:#333;
+      font-size:14px;
+      &:hover{
+        color:#ff9d00;
+        text-decoration:underline;
+      }
+    }
+  }
+  ul>li+li{
+    border-top:1px solid #f7f7f7;
+    line-height:24px
+  }
+}
+.clear{
+  clear:both;
+  display:block;
+  height:0;
+  width:0;
+  font-size:0;
+  line-height:0;
+  overflow:hidden;
+}
+/*cont-mian部分 右侧*/
+.cont-mian{
+  float:right;
+  width:790px;
+  height:50px;
+  margin-bottom:20px;
+  >.hd{
+    height:50px;
+    border-bottom:1px solid #eee;
+    line-height:50px;
+    >h3{
+      float:left;
+      font-size:20px;
+      color:#333;
+      &:after{
+        content:'';
+        clear:both;
+        display:block;
+      }
+    }
+  }
+}
+
+/*旅游攻略瀑布流===============start*/
+.clearfix:after{
+  content: '';
+  clear: both;
+  display: block;
+}
+.feed-item{
+  padding:20px 0;
+  font-size:14px;
+  line-height:24px; 
+}
+.cont-mian .hr{
+  margin-top:20px;
+  height:1px;
+  background:#e5e5e5;
+  overflow:hidden;
+}
+.feed-item{
+  a{
+    display:block;
+  }
+  .stat{
+    float:right;
+    padding: 0 15px;
+    line-height:30px;
+    font-size:14px;
+    border:1px solid #ff9d00;
+    border-radius:15px;
+    background:#fff;
+    color:#666;
+    .num{
+      color:#ff9d00;
+    }
+    .icon-hand{
+      display:inline-block;
+      margin-left:10px;
+      width:15px;
+      height:15px;
+      vertical-align:-2px;
+      background: url(../images/show/new-gl-icon6.png) no-repeat -40px -40px;
+    }
+  }
+  .type{
+    float:left;
+    display:inline-block;
+    line-height:20px;
+    font-size:12px;
+    color:#666;
+    .icon-line{
+      float:left;
+      margin-right:10px;
+      width:20px;
+      height:20px;
+      background:url(../images/show/new-gl-icon6.png) no-repeat 0 -40px;
+      overflow:hidden;
+    }
+    strong{
+      color:#ff9d00;
+    }
+  }
+  .title{
+    font-size:20px;
+    color:#333;
+    margin-bottom:15px;
+    font-family:Arial;
+  }
+  .art{
+    dt{
+      float:left;
+      width:220px;
+      display:inline;
+      margin-right:20px;
+      font-family:Arial;
+    }
+    dd{
+      overflow:hidden;
+      .info{
+        height:102px;
+        padding-top:10px;
+        margin-bottom:16px;
+        color:#666;
+      }
+      .ext{
+        float:right;
+        color:#999;
+        line-height:22px;
+        font-size:12px;
+        .author{
+          display:inline-block;
+          margin-right:10px;
+          font-size:12px;
+          color:#ff9d00;
+          img{
+            width:16px;
+            height:16px;
+            margin-right:5px;
+            border-radius:50%;
+            overflow:hidden;
+            vertical-align:-3px;
+          }
+        }
+      }
+    }
+  }
+}
+/*bd定位脚步*/
+.toolbar{
+  position:fixed;
+  right:50%;
+  bottom:20px;
+  height:auto;
+  margin-right:-558px;
+  z-index:10;
+  .btn{
+    width: 43px;
+    height: 43px;
+    display: block;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    background-color: #fff;
+    position: relative;
+    i{
+      display: inline-block;
+      background:url(../images/show/header-sprites9.png);
+    }
+    em{
+      width: 35px;
+      background-color: #aaa;
+      font-size: 12px;
+      line-height: 16px;
+      color: #fff;
+      font-style: normal;
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      z-index: 2;
+      display: none;
+      padding: 5px 4px 0 4px;
+      height: 38px;
+      border: 1px solid #aaa;
+    }
+  }
+}
+.toolbar-top{
+  display:none;
+  a{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    
+    .icon-top{
+      width:21px;
+      height:12px;
+      background-position:-60px -165px;
+      margin-top:16px;
+    }
+  }
+}
+.toolbar-mid{
+  margin-bottom:-1px;
+  a{
+    .icon-feedback{
+      width: 18px;
+      height: 18px;
+      background-position: -90px -165px;
+      margin-top: 13px;
+    }
+  }
+}
+.toolbar-bot{
+  a{
+    .icon-feedt{
+      width: 19px;
+      height: 19px;
+      background-position: -120px -165px;
+      margin-top: 13px;
+    }
+  }
+}
+.code{
+      border:1px solid #e5e5e5;
+      position:absolute;
+      right:55px;
+      bottom:0;
+      background:#fff;
+      padding:6px;
+      color:#999;
+      display:none;
+    }
 
 /*footer======================start*/
 footer{
