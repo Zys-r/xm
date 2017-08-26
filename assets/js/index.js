@@ -175,9 +175,8 @@ $.get('./data1.json',function(msg){
 	con='';
 	msg.forEach(function(value,key){
 		// console.log(value);
-		con+=`
-			<div class="tiles">
-			`;
+		con+=`<div class="tiles">`;
+
 		value.forEach(function(v,k){
 			if (v.type == "3") {
 			con+=`<div class="item col3">
@@ -263,6 +262,39 @@ $(window).scroll(function(){
 	}
 });
 
+$('.toolbar1>div>.btn').mouseover(function(){
+	$(this).children('em').hide().show();
+}).mouseout(function(){
+	$(this).children('em').hide();
+});
+$('.toolbar1>.toolbar-bot>.btn').mouseover(function(){
+	console.log(11);
+	$(this).siblings('.code').show();
+}).mouseout(function(){
+	$(this).siblings('.code').hide();
+});
+$(window).scroll(function(){
+	var x = $(this).scrollTop();
+	var y = $(this).height();
+	var z = $(document).height();
+	if (x>450) {
+		$('.toolbar-top').show();
+	}else{
+		$('.toolbar-top').hide();
+	}
+	if (z-x-y<600) {
+		$('.toolbar1').css({
+			"position":"absolute",
+			"bottom":"-2150px"
+		});
+	}else{
+		$('.toolbar1').css({
+			"position":"fixed",
+			"bottom":"20px"
+		});
+	}
+});
+
 //xxk lb aside
 $('.md-nav>.nav-item').mouseover(function(){
 	$(this).find('.nav-panel').show();
@@ -272,6 +304,134 @@ $('.md-nav>.nav-item').mouseover(function(){
 }).mouseout(function(){
 	$(this).find('.nav-panel').hide();
 });
+
+//show lunbo
+var ind = 0,time=0,lht = $('.slide-box li').length;
+		
+function so(){
+	time = setInterval(function(){
+		bo(function(){
+			ind = ++ind>lht-1 ? 0 : ind;
+		})
+	},2000)
+}
+so();
+
+$('.focus .slide').mouseover(function(){
+	clearInterval(time);
+}).mouseout(function(){
+	so();
+});
+
+$('.thumb-box li').click(function(){
+	console.log(111);
+	bo(()=>{
+		ind = $(this).index();
+	})
+})
+
+function bo(call){
+	$('.slide-box li').eq(ind).fadeOut(1000);
+	$('.thumb-box li').eq(ind).removeClass('active');
+	call();
+	$('.slide-box li').eq(ind).fadeIn(1000);
+	$('.thumb-box li').eq(ind).addClass('active');
+}	
+
+//pbl
+demo('./data3.json');
+function demo(aaa){
+	$.get(aaa,function(msg){
+	con='';
+	msg.forEach(function(value,key){
+	// console.log(value,key);		
+		con+=`<div class="feed-item">`;
+			value.forEach(function(v,k){
+				con+=`
+					<a href="javascript:;">
+					<div class="bar clearfix">
+						<span class="stat">
+							<span class="num">684</span> 蜂蜂顶
+							<i class="icon-hand"></i>
+						</span>
+						<span class="type">
+							<i class="icon-line"></i>来自
+							<strong>${v.yj}</strong>
+						</span>
+					</div>
+					<div class="title">${v.nr}
+					</div>
+					<!--========下======-->
+					<dl class="art clearfix">
+						<dt>
+							<img src="assets/images/show/${v.img}" alt="">
+						</dt>
+						<dd>
+							<div class="info">${v.xq}
+							</div>
+							<div class="ext">
+								<span class="author">
+									<img src="assets/images/show/${v.img1}" alt="">${v.zz}
+								</span>
+								<span class="nums">${v.pl}</span>
+							</div>
+						</dd>
+					</dl>
+				</a>
+				`;				
+			})
+		con+=`</div>`;
+		con+=`<div class="hr">`;
+		con+=`</div>`;	
+	})
+	$('.data').append(con);
+})
+}
+
+var bool = true;
+$(window).scroll(function(){
+	loadImg();
+	var x = $(window).scrollTop();
+	console.log(111);
+	if(bool){
+		if (x >=2750) {				
+			demo('./data4.json');
+			$('.scri').animate({opacity:1},2000);
+			bool=false;
+		}
+	}
+})
+$('.scri').click(function(){
+	demo('./data4.json');
+})
+loadImg();
+function loadImg() {
+    // 1.获取滚动的距离
+    var sTop = $(window).scrollTop();
+    // 2.窗口的高度
+    var wHeight = $(window).height();
+    // 3.图片距页面顶部的距离
+    $('img:not(.change)').each(function() {
+        if ($(this).offset().top < sTop + wHeight) {
+            $(this).attr('src', $(this).attr('_src'));
+            $(this).hide().fadeIn(500);
+            // 已经改变src地址的图片做个标记
+            $(this).addClass('change');
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
