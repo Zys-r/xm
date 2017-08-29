@@ -659,7 +659,7 @@ section {
 }
 
 .slide-mid .mid-item + .mid-item {
-  margin-left: 20px;
+  margin-left: 13px;
 }
 
 .slide-mid .mid-item + .mid-item:before {

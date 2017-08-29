@@ -414,6 +414,9 @@ section{
   }
 }
 /*aside css end=======*/
+.wrapper .show{
+  display: block;
+}
 .right{
   float:right;
   width:740px;
@@ -421,6 +424,7 @@ section{
   float: right;
   background: #fff;
   padding-left:20px;
+  display:none;
 }
 .hd{
   padding-bottom: 18px;

@@ -53,15 +53,20 @@ $('.head-user').mouseover(function(){
 var arr = ["-22px 0","-22px -22px","-22px -44px","-22px -66px","-22px -154px","-22px -176px","-22px -198x"];
 var arr1 = ["0 0","0 -22px","0 -44px","0 -66px","0 -154px","0 -176px","0 -198x"];
 var suoyin = 0;
+// console.log(suoyin);
 $('.left a').click(function(){
 	$('.left a').eq(suoyin).find('i').css('background-position',arr1[suoyin]);
+	$('.wrapper .right').removeClass('show');
 	var index = $(this).index();
 	suoyin = index;
-	console.log(suoyin);
+	// console.log(suoyin);
+	$('.wrapper .right').eq(suoyin).addClass('show');
 	$(this).addClass('on').siblings().removeClass('on');
 	$(this).find('i').css('background-position',arr[suoyin]);
 });
 
+
+//personnal center xxk
 
 
 

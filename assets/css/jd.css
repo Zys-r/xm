@@ -1,0 +1,1231 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.middle {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.m-active {
+  width: 220px;
+  height: 22px;
+  text-align: center;
+  color: #444;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .header {
+  z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 480px;
+ /* background: url(../images/wKgBZ1mW7VaAGPiyAAfBJ6U88qw98.jpeg) no-repeat center center;*/
+  /*=======头部导航start=======*/
+  /*=======头部导航end========*/
+}
+
+.container .header:hover .change-map,
+.container .header:hover .change-img {
+  display: block;
+}
+
+.container .header .middle {
+  position: fixed;
+  width: 100%;
+  height:46px;
+  background: rgba(34, 35, 36, 0.95);
+}
+
+.container .header .middle .aaa {
+  margin: 0 auto;
+  width: 1000px;
+  height: 46px;
+  font-family: "Microsoft Yahei";
+}
+
+.container .header .middle .aaa .logo {
+  float: left;
+  margin: 9px 18px 0 0;
+}
+
+.container .header .middle .aaa .logo a {
+  display: inline-block;
+  width: 32px;
+  height: 29px;
+  background-color: #ff9d00;
+  background: url(../images/sy/logo.png);
+}
+
+.container .header .middle .aaa .a-left {
+  line-height: 46px;
+}
+
+.container .header .middle .aaa .a-left li {
+  float: left;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.container .header .middle .aaa .a-left li:hover {
+  background-color: #000;
+}
+
+.container .header .middle .aaa .a-left li a {
+  padding: 15px 17px;
+  color: #fff;
+}
+
+.container .header .middle .aaa .a-left .more {
+  position: relative;
+}
+
+.container .header .middle .aaa .a-left .more .more-list {
+  position: absolute;
+  top: 46px;
+  left: 0px;
+  display: none;
+  background-color: rgba(34, 35, 36, 0.95);
+}
+
+.container .header .middle .aaa .a-left .more .more-list li {
+  padding-left: 10px;
+  width: 110px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.container .header .middle .aaa .a-left .more .more-list li a {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.container .header .middle .aaa .a-left .more:hover .more-list {
+  display: block;
+}
+
+.container .header .middle .aaa .a-search {
+  position: relative;
+  float: left;
+  font-size: 0;
+}
+
+.container .header .middle .aaa .a-search input {
+  padding: 0 30px 0 8px;
+  width: 112px;
+  height: 24px;
+  outline: none;
+  border: 1px solid #666;
+  background-color: #666;
+  margin-top: 10px;
+}
+
+.container .header .middle .aaa .a-search i {
+  position: absolute;
+  top: 15px;
+  right: 4px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  background: url(../images/sy/topbar-bg.png) 0 -34px;
+}
+
+.container .header .middle .aaa .a-search {
+  line-height: 46px;
+}
+
+.container .header .middle .aaa .a-search li {
+  float: left;
+  font-size: 0;
+  height: 46px;
+}
+
+.container .header .middle .aaa .a-search li a {
+  font-size: 16px;
+  color: #fff;
+}
+
+.container .header .middle .aaa .a-search li a img {
+  float: left;
+  margin-top: 7px;
+  border-radius: 50%;
+}
+
+.container .header .middle .aaa .a-search li .rec {
+  margin: 11px 15px 0 12px;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+  border-radius: 4px;
+  background-color: #ff9d00;
+}
+
+.container .header .middle .aaa .a-search .a-acv {
+  padding: 0 15px 0 12px;
+}
+.container .header .middle .aaa .a-search .a-acv b{
+  position: absolute;
+  right: 3px;
+  top: 22px;
+  width: 0;
+  height: 0;
+  border-width: 4px;
+  border-style: solid dashed dashed dashed;
+  border-color: #999 transparent transparent transparent;
+}
+
+.container .header .middle .aaa .a-search .a-acv:hover {
+  background-color: #000;
+}
+
+.container .header .middle .aaa .a-search .massage {
+  position: relative;
+}
+
+.container .header .middle .aaa .a-search .massage .massage-list {
+  display: none;
+  position: absolute;
+  top: 46px;
+  left: -45px;
+  width: 120px;
+  height: 150px;
+  background-color: rgba(34, 35, 36, 0.95);
+}
+
+.container .header .middle .aaa .a-search .massage .massage-list li {
+  padding: 0 10px;
+  width: 100px;
+  height: 29px;
+  line-height: 29px;
+}
+
+.container .header .middle .aaa .a-search .massage .massage-list li:hover {
+  background-color: #000;
+}
+
+.container .header .middle .aaa .a-search .massage .massage-list li a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.container .header .middle .aaa .a-search .massage:hover .massage-list {
+  display: block;
+}
+
+.container .header .middle .aaa .a-search .my {
+  position: relative;
+}
+
+.container .header .middle .aaa .a-search .my:hover .my-uuu {
+  display: block;
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu {
+  display: none;
+  position: absolute;
+  top: 46px;
+  left: -95px;
+  width: 170px;
+  height: 360px;
+  background-color: rgba(34, 35, 36, 0.95);
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu li {
+  padding-left: 10px;
+  width: 160px;
+  height: 29px;
+  line-height: 29px;
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu li:hover {
+  background-color: #000;
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu li a {
+  font-size: 13px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu li:nth-of-type(1) {
+  background-color: #ff9d00;
+}
+
+.container .header .middle .aaa .a-search .my .my-uuu li:nth-of-type(1):hover {
+  background-color: #ff9d00;
+}
+
+.container .header .change-img,
+.container .header .change-map {
+  position: absolute;
+  bottom: 30px;
+  overflow: hidden;
+  display: inline-block;
+  display: none;
+  padding: 0 30px 0 20px;
+  width: 119px;
+  height: 39px;
+  line-height: 39px;
+  font-size: 14px;
+  color: #fff;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container .header .change-img:hover,
+.container .header .change-map:hover {
+  color: #ff9d00;
+}
+
+.container .header .change-img i,
+.container .header .change-map i {
+  margin-right: 5px;
+  float: left;
+  margin-top: 6px;
+}
+
+.container .header .change-img {
+  right: 14.5%;
+}
+
+.container .header .change-img:hover i {
+  background: url(../images/sy/ico_sprite_v8.png) 1px -213px;
+}
+
+.container .header .change-img i {
+  display: inline-block;
+  width: 26px;
+  height: 23px;
+  background: url(../images/sy/ico_sprite_v8.png) 1px -213px;
+}
+
+.container .header .change-map {
+  right: 24%;
+}
+
+.container .section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .section .sec-bar {
+  width: 100%;
+  height: 59px;
+  background-color: #fff;
+  border-bottom: 1px solid #d6d6d6;
+  box-shadow: 0 2p 5px rgba(0, 0, 0, 0.12);
+}
+
+.container .section .sec-bar .bar-middle {
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  height: 59px;
+}
+
+.container .section .sec-bar .bar-middle > ul {
+  float: right;
+}
+
+.container .section .sec-bar .bar-middle > ul > li {
+  float: left;
+  line-height: 56px;
+}
+
+.container .section .sec-bar .bar-middle > ul > li > a {
+  margin-right: 12px;
+  padding: 18px 15px;
+  color: #444;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  border-bottom: 3px solid transparent;
+}
+
+.container .section .sec-bar .bar-middle > ul > li > a:hover {
+  color: #ff9d00;
+}
+
+.container .section .sec-bar .bar-middle > ul > li > a i {
+  margin-left: 5px;
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  background: url(../images/sy/ico_sprite_v8.png) -93px -60px;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-click a {
+  border-bottom: 3px solid #ff9d00;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more {
+  position: relative;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more:hover a {
+  color: #444;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more:hover .bar-more-list {
+  display: block;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  top: 59px;
+  right: 15px;
+  width: 140px;
+  height: 310px;
+  background-color: #fff;
+  border-radius: 10px 0 10px 10px;
+  border: 1px solid #6d6d6d;
+  box-shadow: 2px 2px 3px rgba(144, 144, 144, 0.4);
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li:nth-of-type(1) {
+  margin-top: 15px;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li {
+  padding: 0 20px;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li:hover {
+  background-color: #ff9d00;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li:hover a {
+  color: #fff;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li a {
+  font-size: 0;
+  color: #654939;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .sec-bar .bar-middle > ul .bar-more .bar-more-list li a i {
+  margin: 3px 5px 0 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/sy/home_sprite_v15.png) -347px -140px;
+}
+
+.container .section .main {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.container .section .main .middle {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 980px;
+  height: 100%;
+}
+
+.container .section .main .middle .m-left {
+  position: absolute;
+  float: left;
+  width: 280px;
+  height: 100%;
+}
+
+.container .section .main .middle .m-left .m-info {
+  position: relative;
+  width: 280px;
+  height: 312px;
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-left .m-info img {
+  position: absolute;
+  top: -50px;
+  left: 80px;
+  border-radius: 50%;
+}
+
+.container .section .main .middle .m-left .m-info h2 {
+  padding-top: 76px;
+  text-align: center;
+  color: #666;
+  line-height: 24px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-left .m-info .mark {
+  margin: 10px 0;
+  width: 280px;
+  height: 24px;
+  text-align: center;
+}
+
+.container .section .main .middle .m-left .m-info .mark a {
+  display: inline-block;
+  margin-right: 3px;
+  height: 20px;
+}
+
+.container .section .main .middle .m-left .m-info .mark .vip {
+  width: 40px;
+  background: url(../images/sy/2.png) 0 -460px;
+}
+
+.container .section .main .middle .m-left .m-info .mark .duo {
+  width: 30px;
+  background: url(../images/sy/2.png) -41px -460px;
+}
+
+.container .section .main .middle .m-left .m-info .mark .xing {
+  width: 38px;
+  background: url(../images/sy/2.png) -72px -460px;
+}
+
+.container .section .main .middle .m-left .m-info .dengji {
+  margin-top: 16px;
+  padding: 0 15px;
+  width: 250px;
+  height: 18px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container .section .main .middle .m-left .m-info .dengji span {
+  float: left;
+  padding: 0 10px 0 7px;
+  width: 73px;
+  height: 15px;
+  border-right: 1px solid #999;
+  color: #666;
+  font-size: 14px;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-left .m-info .dengji span a {
+  color: #ea3c1a;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+.container .section .main .middle .m-left .m-info .dengji span a:hover {
+  border-bottom: 1px solid #ea3c1a;
+}
+
+.container .section .main .middle .m-left .m-info .dengji i {
+  width: 60px;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  width: 17px;
+  height: 17px;
+  background: url(../images/sy/ico_sprite_v8.png) -108px -146px;
+}
+
+.container .section .main .middle .m-left .m-info .my-info {
+  margin: 20px;
+  display: inline-block;
+  width: 240px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  background-color: #efefef;
+  border-radius: 4px;
+}
+
+.container .section .main .middle .m-left .m-info .my-info:hover {
+  color: #fff;
+  background-color: #ff9d00;
+}
+
+.container .section .main .middle .m-left .m-info .num {
+  overflow: hidden;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.container .section .main .middle .m-left .m-info .num div {
+  float: left;
+  padding: 10px 0;
+  width: 92px;
+  height: 52px;
+  border-right: 1px solid #e2e2e2;
+}
+
+.container .section .main .middle .m-left .m-info .num div a {
+  margin-left: 40px;
+  color: #444;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  font-family: Arial;
+}
+
+.container .section .main .middle .m-left .m-info .num div a:hover {
+  border-bottom: 2px solid #444;
+}
+
+.container .section .main .middle .m-left .m-info .num div p {
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  color: #666;
+}
+
+.container .section .main .middle .m-left .honor {
+  position: relative;
+  padding: 18px 0 25px;
+  width: 280px;
+  height: 135px;
+  background-color: #f6f6f6;
+}
+
+.container .section .main .middle .m-left .honor div {
+  width: 280px;
+  height: 16px;
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.container .section .main .middle .m-left .honor .img-t {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url(../images/sy/3.png) -48px 0;
+}
+
+.container .section .main .middle .m-left .honor .img-b {
+  position: absolute;
+  left: 40px;
+  top: 100px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: url(../images/sy/3.png) 0 0;
+}
+
+.container .section .main .middle .m-left .honor .dir {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  position: absolute;
+  top: 75px;
+}
+
+.container .section .main .middle .m-left .honor .le {
+  left: 20px;
+  background: url(../images/sy/4.png) -23px -39px;
+}
+
+.container .section .main .middle .m-left .honor .ri {
+  right: 20px;
+  background: url(../images/sy/4.png) -35px -39px;
+}
+
+.container .section .main .middle .m-left .my-see {
+  padding: 45px 30px 0;
+  width: 220px;
+  height: 134px;
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-left .my-see ul {
+  margin-top: 20px;
+}
+
+.container .section .main .middle .m-left .my-see ul li {
+  float: left;
+  margin: 0 4px 20px 0;
+  width: 51px;
+  height: 74px;
+}
+
+.container .section .main .middle .m-left .my-see ul li a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #ff7200;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-left .my-see ul li a:hover {
+  text-decoration: underline;
+}
+
+.container .section .main .middle .m-left .my-group {
+  padding: 45px 15px 0;
+  width: 250px;
+  height: 150px;
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-left .my-group div {
+  width: 250px;
+}
+
+.container .section .main .middle .m-left .my-group ul {
+  overflow: hidden;
+}
+
+.container .section .main .middle .m-left .my-group ul li {
+  float: left;
+  margin-right: 3px;
+  width: 80px;
+  height: 110px;
+}
+
+.container .section .main .middle .m-left .my-group ul li a {
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+  color: #ff7200;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-left .my-group ul li a:hover {
+  text-decoration: underline;
+}
+
+.container .section .main .middle .m-left .say {
+  padding: 45px 15px 0;
+  width: 250px;
+  height: 204px;
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-left .say div {
+  width: 250px;
+}
+
+.container .section .main .middle .m-left .say textarea {
+  margin-top: 20px;
+  padding: 15px;
+  width: 218px;
+  height: 78px;
+  outline: none;
+  border: 1px solid transparent;
+  border: 0;
+  background-color: #efefef;
+}
+
+.container .section .main .middle .m-left .say a {
+  margin-top: 10px;
+  display: inline-block;
+  width: 250px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #ccc;
+}
+
+.container .section .main .middle .m-left .say a:hover {
+  background-color: #ff8a00;
+  transition: background-color .3s;
+}
+
+.container .section .main .middle .m-right {
+  float: right;
+  width: 680px;
+  height: 100%;
+}
+
+.container .section .main .middle .m-right .m-nav {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  padding: 20px 0 17px;
+  width: 680px;
+  height: 80px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-right .m-nav ul {
+  overflow: hidden;
+}
+
+.container .section .main .middle .m-right .m-nav ul li {
+  float: left;
+  width: 169px;
+  height: 76px;
+  border-right: 1px solid #e2e2e2;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .write-note {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 45px;
+  height: 46px;
+  background: url(../images/sy/2.png) -210px -425px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .write-note:hover {
+  background: url(../images/sy/2.png) -210px -476px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .ask-expert {
+  display: block;
+  margin: 0 auto;
+  width: 53px;
+  height: 46px;
+  background: url(../images/sy/2.png) -260px -427px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .ask-expert:hover {
+  background: url(../images/sy/2.png) -260px -477px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .add-foot {
+  display: block;
+  margin: 0 auto;
+  width: 56px;
+  height: 49px;
+  background: url(../images/sy/2.png) -317px -422px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .add-foot:hover {
+  background: url(../images/sy/2.png) -317px -472px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .invite {
+  display: block;
+  margin: 0 auto;
+  width: 45px;
+  height: 47px;
+  background: url(../images/sy/2.png) -379px -424px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li .invite:hover {
+  background: url(../images/sy/2.png) -379px -474px;
+}
+
+.container .section .main .middle .m-right .m-nav ul li span a {
+  margin-top: 6px;
+  display: inline-block;
+  width: 169px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-right .m-nav ul li span a:hover {
+  color: #ff9d00;
+}
+
+.container .section .main .middle .m-right .my-house {
+  margin-bottom: 30px;
+  padding: 28px 30px 30px;
+  width: 623px;
+  height: 342px;
+  background-color: #f5dc52;
+  box-shadow: 2px 3px 0 #dfca58;
+}
+
+.container .section .main .middle .m-right .my-house p {
+  line-height: 30px;
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-right .my-house p strong {
+  font-size: 18px;
+  color: #ff7200;
+  font-weight: normal;
+}
+
+.container .section .main .middle .m-right .my-house div {
+  float: left;
+  margin-top: 20px;
+  margin-right: 9px;
+  padding: 0 16px 30px;
+  width: 166px;
+  height: 229px;
+  background-color: #fff;
+}
+
+.container .section .main .middle .m-right .my-house div p {
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.container .section .main .middle .m-right .my-house div a {
+  margin: 0 auto;
+  margin-top: 35px;
+  display: block;
+  width: 124px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  border-radius: 30px;
+  background-color: #f1744f;
+}
+
+.container .section .main .middle .m-right .my-house div i {
+  display: block;
+}
+
+.container .section .main .middle .m-right .my-house .your-info i {
+  margin: 20px auto;
+  width: 59px;
+  height: 71px;
+  background: url(../images/sy/default_sprite_v6.png) -1px -256px;
+}
+
+.container .section .main .middle .m-right .my-house .see-expert i {
+  margin: 18px auto;
+  width: 72px;
+  height: 76px;
+  background: url(../images/sy/default_sprite_v6.png) -67px -256px;
+}
+
+.container .section .main .middle .m-right .my-house .mf-vip i {
+  margin: 15px auto;
+  width: 71px;
+  height: 81px;
+  background: url(../images/sy/default_sprite_v6.png) -147px -255px;
+}
+
+.container .section .main .middle .m-right .my-house .mf-vip a {
+  position: relative;
+  background-color: #4ea88f;
+}
+
+.container .section .main .middle .m-right .my-house .mf-vip a i {
+  position: absolute;
+  top: -13px;
+  left: 2px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url(../images/sy/home_sprite_v15.png) -66px -210px;
+}
+
+.container .section .main .middle .m-right .ding {
+  margin-bottom: 18px;
+  padding: 25px 25px 15px;
+  width: 630px;
+  height: 162px;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.container .section .main .middle .m-right .ding p {
+  color: #666;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+
+.container .section .main .middle .m-right .ding p a {
+  color: #ff8a00;
+}
+
+.container .section .main .middle .m-right .ding p a:hover {
+  text-decoration: underline;
+}
+
+.container .section .main .middle .m-right .ding p span {
+  font-size: 12px;
+}
+
+.container .section .main .middle .m-right .writing {
+  margin-top: 18px;
+  padding-bottom: 30px;
+  width: 680px;
+  height: 490px;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.container .section .main .middle .m-right .writing .w-head {
+  position: relative;
+  padding: 25px 30px;
+  line-height: 30px;
+}
+
+.container .section .main .middle .m-right .writing .w-head h2 {
+  color: #666;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-right .writing .w-head a {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: block;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #ff9d00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+}
+
+.container .section .main .middle .m-right .writing .w-head a i {
+  display: inline-block;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  background: url(../images/sy/2.png) -228px -325px;
+  vertical-align: middle;
+}
+
+.container .section .main .middle .m-right .writing .w-content {
+  width: 680px;
+  height: 360px;
+  background: url(../images/sy/noyj_v2.jpg) no-repeat;
+}
+
+.container .section .main .middle .m-right .writing a {
+  margin: 15px 0 0 30px;
+  display: inline-block;
+  width: 92px;
+  height: 19px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+}
+
+.container .section .main .middle .m-right .writing a:hover {
+  color: #ff9d00;
+}
+
+.container .section .main .middle .m-right .writing a:hover i {
+  background: url(../images/sy/default_sprite_v6.png) -68px -215px;
+}
+
+.container .section .main .middle .m-right .writing a i {
+  margin-right: 5px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  background: url(../images/sy/ico_sprite_v8.png) -50px -215px;
+}
+
+.container .section .main .middle .m-right .answer,
+.container .section .main .middle .m-right .comment {
+  margin-bottom: 18px;
+  padding-bottom: 30px;
+  width: 680px;
+  height: 320px;
+  background-color: #fff;
+  boder: 1px solid #e2e2e2;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.container .section .main .middle .m-right .answer .an-head,
+.container .section .main .middle .m-right .comment .an-head {
+  padding: 25px 30px;
+  width: 620px;
+  height: 32px;
+  color: #666;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  line-height: 30px;
+}
+
+.container .section .main .middle .m-right .answer .an-content {
+  position: relative;
+  padding: 5px 0 50px 365px;
+  width: 315px;
+  height: 183px;
+}
+
+.container .section .main .middle .m-right .answer .an-content p {
+  position: absolute;
+  top: 90px;
+  left: 110px;
+  display: block;
+  width: 220px;
+  height: 98px;
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  line-height: 25px;
+}
+
+.container .section .main .middle .m-right .answer .an-content i {
+  display: inline-block;
+  width: 176px;
+  height: 183px;
+  background: url(../images/sy/default_sprite_v6.png) -227px -65px;
+}
+
+.container .section .main .middle .m-right .comment .c-content {
+  position: relative;
+  padding: 0 0 50px 145px;
+  width: 535px;
+  height: 177px;
+}
+
+.container .section .main .middle .m-right .comment .c-content i {
+  display: inline-block;
+  width: 199px;
+  height: 177px;
+  background: url(../images/sy/default_sprite_v6.png) -409px -66px;
+}
+
+.container .section .main .middle .m-right .comment .c-content p {
+  position: absolute;
+  top: 90px;
+  left: 310px;
+  display: block;
+  width: 190px;
+  height: 89px;
+  color: #999;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  line-height: 25px;
+}
+
+.container .footer {
+  padding-bottom: 20px;
+  width: 100%;
+  height: 68px;
+  background-color: #3c3c3c;
+}
+
+.container .footer .ft-ft {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  width: 1000px;
+  height: 43px;
+}
+
+.container .footer .ft-ft dl {
+  display: flex;
+}
+
+.container .footer .ft-ft dl dt {
+  margin-right: 20px;
+  display: inline-block;
+  width: 136px;
+  height: 39px;
+  background: url(../images/sy/mfw-footer-sprite5.png) 0 -30px;
+}
+
+.container .footer .ft-ft dl dd {
+  font-size: 12px;
+  font-family: Arial, "Lucida Grande", "Microsoft Yahei", "Hiragino Sans GB", "Hiragino Sans GB W3", SimSun, "PingFang SC", STHeiti;
+  color: #c2c2c2;
+  line-height: 22px;
+}
+
+.container .footer .ft-ft dl dd p a {
+  color: #c2c2c2;
+}
+
+.container .footer .ft-ft dl dd p a:hover {
+  color: #fff;
+}
+
+.container .footer .ft-ft dl dd p .map {
+  color: #ff9d00;
+}
+
+.container .footer .ft-ft dl dd p .map:hover {
+  color: #ff9d00;
+}
+
+.container .footer .ft-ft ul {
+  display: flex;
+}
+
+.container .footer .ft-ft ul li {
+  margin-left: 10px;
+  width: 90px;
+  height: 30px;
+}
+
+.container .footer .ft-ft ul li:nth-of-type(3) {
+  margin-right: 10px;
+}
+
+.container .footer .ft-ft ul .chengx {
+  background: url(../images/sy/mfw-footer-sprite5.png) 0 -70px;
+}
+
+.container .footer .ft-ft ul .kex {
+  background: url(../images/sy/mfw-footer-sprite5.png) 0 -110px;
+}
+
+.container .footer .ft-ft ul .wangx {
+  background: url(../images/sy/mfw-footer-sprite5.png) 0 -150px;
+}
